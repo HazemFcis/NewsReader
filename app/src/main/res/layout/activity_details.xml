@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/draw_insets_frame_layout"
+        tools:context=".Views.Details">
+         
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollview"
+    >
+        <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+        <FrameLayout
+                android:id="@+id/photo_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/photo_placeholder">
+
+            <ImageView
+                    android:id="@+id/photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200dp"
+                    android:background="@color/photo_placeholder"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/ic_launcher_background" />
+
+        </FrameLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_200dp"
+            android:elevation="@dimen/_2dp"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:id="@+id/meta_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/_16dp"
+                android:background="#333"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_16dp"
+                android:paddingLeft="@dimen/_16dp"
+                android:paddingRight="@dimen/_16dp"
+                android:paddingTop="@dimen/_16dp">
+
+            <TextView
+                    android:id="@+id/article_title"
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:lineSpacingMultiplier="0.9"
+                    android:paddingBottom="@dimen/_4dp"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_26sp"
+                    android:textStyle="bold"
+                    tools:text="Ebooks, Neither E, Nor Books" />
+
+            <TextView
+                    android:id="@+id/article_byline"
+                    style="?android:attr/textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#8fff" />
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/article_body"
+                style="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_16dp"
+                android:layout_marginRight="@dimen/_16dp"
+                android:paddingBottom="@dimen/_88dp"
+                android:textSize="@dimen/_20sp" />
+    </LinearLayout>
+        </android.support.design.widget.CoordinatorLayout>
+    </ScrollView>
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/share_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="@dimen/_24dp"
+            android:layout_marginEnd="@dimen/_24dp"
+            android:contentDescription="Share"
+            android:elevation="@dimen/_6dp"
+            android:src="@drawable/ic_share"
+            app:fabSize="normal"
+            app:pressedTranslationZ="@dimen/_6dp"
+            android:layout_marginRight="@dimen/_24dp"/>
+</FrameLayout>
